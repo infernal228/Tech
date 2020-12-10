@@ -132,9 +132,6 @@ hr {
   .burger-menu__btn {
     width: 60px;
     height: 60px;
-    border-radius: 50%;
-    background-color: #2a2a2a;
-    border: 1px solid #2a2a2a;
     position: fixed;
     outline: none;
     top: 10px;
@@ -145,7 +142,7 @@ hr {
     position: absolute;
     width: 30px;
     height: 3px;
-    background-color: #fff;
+    background-color: #000000;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -155,17 +152,25 @@ hr {
     position: absolute;
     width: 30px;
     height: 3px;
-    background-color: #fff;
+    background-color: #000000;
     content: '';
     top: -8px;
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
   }
   .burger-menu__btn span::before {
     position: absolute;
     width: 30px;
     height: 3px;
-    background-color: #fff;
+    background-color: #000000;
     content: '';
     top: 8px;
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
   }
   .bg-active span {
     background-color: transparent;
@@ -174,14 +179,25 @@ hr {
     top: 0;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
+    background-color: #fff;
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
   }
   .bg-active span::before {
     top: 0;
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
+    background-color: #fff;
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
   }
   .bg-active .burger-menu__nav {
-    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   .burger-menu__nav {
     padding-top: 60px;
@@ -196,7 +212,12 @@ hr {
             flex-flow: column;
     height: 100%;
     background-color: #2a2a2a;
-    left: -100%;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
   }
   .burger-menu__link {
     padding: 20px;
