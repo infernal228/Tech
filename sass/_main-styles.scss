@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.text-nowrap{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@mixin breakpoint($point) {
+  @if $point == mobile {
+    @media screen and(max-width: 480px) { @content; }
+  }
+
+  @else if $point == laptop {
+    @media screen and(min-width: 768px) { @content; }
+  }
+
+  @else if $point == desktop {
+    @media screen and(min-width: 1224px) { @content; }
+  }
+  @else if $point == largescreens {
+      @media screen and(min-width: 1824px) { @content; }
+  }
+}
